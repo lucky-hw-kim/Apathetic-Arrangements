@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+html,
+body {
+  margin: 0;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Berkshire Swash', cursive;
+  color: var(--themeBlack);
+  background: var(--background-color);
+  overflow-x:hidden;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+:root{
+  --themeGreen: #021910;
+  --themeBlack: #2E2E2E;
+  --themeRed: #dc585f;
+  --light: #e0c8b2;
+  --sand: #eacd8c;
+  --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
+  --background-color: linear-gradient(180deg, rgb(3, 27, 3) 6%, rgb(1, 49, 19) 100%);
+  --cartBack : rgba(255, 255, 255, 0.38);
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: pink;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--themeRed);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 300ms ease;
+
+}
+
+.btn{
+  width: max-content;
+  padding: 1rem;
+  border-radius: 4rem;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: var(--themeRed);
+
+}
