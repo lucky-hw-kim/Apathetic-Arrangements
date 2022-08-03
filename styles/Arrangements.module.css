@@ -17,3 +17,44 @@
   margin-top: 0.5rem;
   margin-left: 0.5rem;
 }
+
+.imageWrapper {
+  height: 18rem;
+  width: 22rem;
+  position: relative;
+  overflow: hidden;
+  /* border-radius: 2rem; */
+  border: 2px solid var(--light) ;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.arrangements {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 2.5rem;
+  font-family: 'Bebas Neue', cursive;
+  color: var(--light);
+  letter-spacing: 0.2rem;
+  margin: 2rem;
+}
+
+.flower {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.imageWrapper>span>img:hover{
+  transform: scale(1.1);
+}
+
+.flower:hover{
+  cursor: pointer;
+}
