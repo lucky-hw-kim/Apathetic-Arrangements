@@ -6,7 +6,7 @@ html,
 body {
   margin: 0;
   font-family: 'Bebas Neue', cursive;
-  font-family: 'Berkshire Swash', cursive;
+  /* font-family: 'Berkshire Swash', cursive; */
   color: var(--themeBlack);
   background: var(--background-color);
   overflow-x:hidden;
@@ -41,7 +41,7 @@ a {
   --light: #e0c8b2;
   --sand: #eacd8c;
   --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
-  --background-color: linear-gradient(180deg, rgb(3, 27, 3) 6%, rgb(1, 49, 19) 100%);
+  --background-color: linear-gradient(180deg, rgb(2, 21, 2) 6%, rgb(1, 49, 19) 100%);
   --cartBack : rgba(255, 255, 255, 0.38);
 }
 

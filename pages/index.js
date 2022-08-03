@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/Layout";
 import css from "../styles/home.module.css"
+import Hero from "../components/Hero"
 export default function Home() {
   return (
     <Layout>
@@ -13,7 +14,7 @@ export default function Home() {
         </Head>
         {/* Body */}
         <main>
-          {/* Hero */}
+          <Hero/>
           {/* About Us */}
           {/* Menu */}
         </main>

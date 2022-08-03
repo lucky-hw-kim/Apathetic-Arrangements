@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  color: var(--sand);
+  justify-content: space-between;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+.header>:nth-child(3) {
+  transform: translateX(-60px);
+
+}
+
+.logo{
+  min-width: 330px;
+  transform: translateX(-50px);
+}
+
+.menu {
+  display: flex;
+  gap: 3rem;
+}
+
+.header>ul>li{
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.badge{
+  position: absolute;
+  display: flex;
+  background-color: var(--themeRed);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  right: -0.8rem;
+  font-size: 1rem;
+
+}
+
