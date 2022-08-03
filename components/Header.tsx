@@ -8,14 +8,16 @@ function Header() {
     <div className={css.header}>
       {/* LEFT SIDE */}
       <ul className={css.menu}>
-        <li>ABOUT</li>
+        <li><Link href="#about">ABOUT</Link> </li>
         <li>SHOP</li>
         <li>CONTACT</li>
       </ul>
       {/* CENTER LOGO */}
       <div className={css.logo}>
+        <Link href="/">
         <Image src={Logo} alt="logo" layout="responsive" 
         />
+        </Link>
       </div>
       {/* RIGHT CART */}
       <ul className={css.menu}>

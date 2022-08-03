@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.heading{
+  font-size: 4.5rem;
+  color: var(--sand);
+  display: flex;
+  justify-content: center;
+}
+
+.tinyLogo{
+  width: 100px;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}

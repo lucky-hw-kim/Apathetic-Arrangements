@@ -1,12 +1,12 @@
 .container{
   display: flex;
-  margin-top: 0.2rem;
   justify-content: space-around;
 }
 
 .heroImg{
   min-width: 700px;
   padding: 5rem;
+  margin-top: -3rem;
 }
 
 .slogan {
@@ -42,9 +42,9 @@
 }
 
 .heroImg:hover{
-  transform: rotate(45deg);
+  transform: scale(1.05);
 }
 
-.slogan>:nth-child(1):hover,.slogan>:nth-child(2):hover,.slogan>:nth-child(3):hover,.slogan>:nth-child(4):hover{
+.slogan>:nth-child(3):hover{
   transform: scale(1.05)
 }

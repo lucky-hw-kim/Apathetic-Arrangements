@@ -17,6 +17,10 @@
   transform: translateX(-50px);
 }
 
+.logo:hover{
+  cursor: pointer;
+}
+
 .menu {
   display: flex;
   gap: 3rem;
@@ -40,5 +44,11 @@
   right: -0.8rem;
   font-size: 1rem;
 
+}
+
+.header>ul>li:hover{
+  color: var(--themeRed);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
