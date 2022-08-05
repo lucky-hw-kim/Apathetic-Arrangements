@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  padding: 2rem;
+  gap: 5rem;
+  margin: 3rem;
+  color: var(--light);
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 40%;
+  height: 25rem;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.imageWrapper>span>img:hover{
+  transform: scale(1.1);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2rem;
+  font-weight: bold;
+  justify-content: space-around;
+}
+
+.right>:nth-child(1){
+  font-size: 2.3rem;
+  font-weight: normal;
+  color: var(--sand);
+}
+
+.right>:nth-child(2){
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+  font-weight: normal;
+  color: var(--light);
+  max-width: 650px;
+}
+
+.size {
+  display: flex;
+  gap:3rem;
+  font-size: 1.5rem;
+}
+
+.sizeVariants {
+  display: flex;
+  gap: 0.6rem;
+  color: var(--themeRed);
+}
+
+.sizeVariants > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 1.5rem;
+  border: 2px solid var(--themeRed);
+  border-radius: 2rem;
+}
+
+
+.sizeVariants > div:hover{
+  background-color: var(--themeRed);
+  color: white;
+  cursor: pointer;
+}
+
+.quantity {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 600;
+  gap: 3rem;
+}
+
+.counter {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn{
+  font-weight: normal;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.selected {
+  background-color: var(--themeRed);
+  color: white;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+

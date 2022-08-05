@@ -6,11 +6,14 @@ import Hero from "../components/Hero"
 import About from "../components/About"
 import Arrangements from "../components/Arrangements"
 import { client } from "../lib/client";
-  
+import Script from "next/script";
+
 
 export default function Home({flowers}) {
+
   return (
     <Layout>
+        <Script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0U-KJ66LaiOT0Sa5-FzGz3so8Wn7T_N8&libraries=places" />
       <div >
         <Head>
           <title>Apathetic Arrangements</title>

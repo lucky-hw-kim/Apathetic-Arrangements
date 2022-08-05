@@ -23,8 +23,8 @@
   width: 22rem;
   position: relative;
   overflow: hidden;
-  /* border-radius: 2rem; */
-  border: 2px solid var(--light) ;
+  border-radius: 2rem;
+  /* border: 2px solid var(--light) ; */
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
