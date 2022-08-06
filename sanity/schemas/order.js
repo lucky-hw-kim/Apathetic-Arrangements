@@ -36,6 +36,14 @@ export default {
       }
     },
     {
+      name: 'note',
+      title: 'Note',
+      type: "string",
+      options: {
+        maxLength: 240
+      }
+    },
+    {
       name: 'method',
       title: 'Method',
       type: "number",

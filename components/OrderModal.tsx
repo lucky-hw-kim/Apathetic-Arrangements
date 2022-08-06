@@ -1,4 +1,4 @@
-import Router, { useRouter } from "next/router"
+import { useRouter } from "next/router"
 import { Modal, ThemeIcon, useMantineTheme } from "@mantine/core"
 import css from "../styles/OrderModal.module.css"
 import usePlacesAutocomplete, {
@@ -7,12 +7,15 @@ import usePlacesAutocomplete, {
 } from "use-places-autocomplete";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { useState } from "react";
-import { createRouteLoader } from "next/dist/client/route-loader";
 import toast from "react-hot-toast";
 import { useStore } from "../store/store";
+import {createOrder} from "../lib/orderHandler"
 
+const OrderModal = ({ opened, setOpened, paymentMethod}) => {
+  const router = useRouter();
+  const theme = useMantineTheme();
+  const total = typeof window !== "undefined" && localStorage.getItem('total')
 
-const OrderModal = ({ opened, setOpened, paymentMethod }) => {
   const [formData, setFormData] = useState({})
 
   const handleInput = (e: any) => {
@@ -22,21 +25,20 @@ const OrderModal = ({ opened, setOpened, paymentMethod }) => {
 
   const resetCart = useStore(state => state.resetCart);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async(e: any) => {
     e.preventDefault();
-    // const id = await createOrder({ ...formData, total, paymentMethod })
-    console.log(formData);
+    const id = await createOrder({ ...formData, total, paymentMethod })
+    console.log(id);
     toast.success("Order Placed")
     resetCart();
     {
       typeof window !== 'undefined' && localStorage.setItem('order', id)
     }
-    Router.push(`order/${id}`)
+    router.push(`order/${id}`)
     
   }
 
-  const theme = useMantineTheme();
-  const total = typeof window !== "undefined" && localStorage.getItem('total')
+
 
   // Address Auto complete
 
@@ -83,7 +85,7 @@ const OrderModal = ({ opened, setOpened, paymentMethod }) => {
       } = suggestion;
 
       return (
-        <li key={place_id} onClick={handleSelect(suggestion)}>
+        <li key={place_id} onClick={handleSelect(suggestion)} className={css.li}>
           <strong>{main_text}</strong> <small>{secondary_text}</small>
         </li>
       );
@@ -105,7 +107,6 @@ const OrderModal = ({ opened, setOpened, paymentMethod }) => {
             onChange={(e)=>{setValue(e.target.value)}}
             disabled={!ready}
             placeholder="Address"
-            
           />
           {/* We can use the "status" to decide whether we should display the dropdown or not */}
           {status === "OK" && <ul>{renderSuggestions()}</ul>}

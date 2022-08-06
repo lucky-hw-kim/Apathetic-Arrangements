@@ -2,19 +2,20 @@
   display: flex;
   margin-top: 1rem;
   flex-direction: column;
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Bodoni 72 Oldstyle', bold;
 }
 .logo{
   width: 100px;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
+  
 }
 .heading {
   font-size: 4.5rem;
   color: var(--sand);
   display: flex;
   justify-content: center;
-
+  font-weight: 600;
 }
 
 .aboutUs{

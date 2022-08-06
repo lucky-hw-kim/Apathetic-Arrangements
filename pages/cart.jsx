@@ -126,7 +126,7 @@ const Cart = () => {
                 <span>$ {total()}</span>
               </div>
             </div>
-            {!order && CartData.flowers.length > 0 ? (
+            {/* {!order && CartData.flowers.length > 0 ? ( */}
               <div className={css.buttons}>
                 <button className="btn" onClick={handleOnDelivery}>
                   Pay on Delivery
@@ -135,9 +135,9 @@ const Cart = () => {
                   Pay Now
                 </button>
               </div>
-            ) : (
+            {/* ) : (
               <span>Order in process</span>
-            )}
+            )} */}
           </div>
         </div>
       )}

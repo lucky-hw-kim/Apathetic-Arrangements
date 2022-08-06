@@ -4,18 +4,18 @@
 }
 
 .heroImg{
-  min-width: 700px;
+  min-width: 600px;
   padding: 5rem;
-  margin-top: -3rem;
+  margin-top: -4rem;
 }
 
 .slogan {
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  font-size: 5rem;
-  font-family: 'Berkshire Swash', cursive;
+  font-size: 5.5rem;
+  font-family: 'Bodoni 72 Oldstyle', bold;
   color: var(--themeRed);
 }
 
@@ -24,27 +24,49 @@
   transform: translateX(-200px)
 }
 
-.slogan>:nth-child(2){
-  transform: translateX(-20px);
- 
-}
-
-.slogan>:nth-child(3){
+.true{
   font-size: 12rem;
   transform: translateX(-80px);
   font-family: 'Bebas Neue', cursive;
-  color: rgb(61, 87, 61);
+  color: #062123;
 }
 
-.slogan>:nth-child(4){
+.slogan>:nth-child(2)>span{
+  font-size: 6rem;
   margin-top: -2rem;
   transform: translateX(50px);
+  color: var(--themeRed);
+  font-family: 'Bodoni 72 Oldstyle', bold;
 }
 
 .heroImg:hover{
   transform: scale(1.05);
 }
 
-.slogan>:nth-child(3):hover{
-  transform: scale(1.05)
+.detailSlogan {
+  color: var(--light);
+  font-size: 1.6rem;
+  margin-left: -2rem;
+}
+
+.slogan > .true:hover {
+  color: #14686e;
+  animation: shine 1s infinite;
+}
+
+
+.btn {
+  font-size: 1.4rem;
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 2px solid var(--light);
+  color: var(--light);
+  margin-left: -2rem;
+}
+
+.btn:hover {
+  background-color: var(--light);
+  color: var(--themeRed);
+  cursor: pointer;
 }

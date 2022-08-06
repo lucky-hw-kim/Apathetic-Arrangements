@@ -38,10 +38,10 @@ a {
   --themeGreen: #021910;
   --themeBlack: #2E2E2E;
   --themeRed: #dc585f;
-  --light: #e0c8b2;
+  --light: #fbffef;
   --sand: #eacd8c;
   --shadow: -4px 12px 20px -2px rgba(0, 0, 0, 0.19);
-  --background-color: linear-gradient(180deg, rgb(2, 26, 22) 6%, rgb(3, 47, 44) 100%);
+  --background-color: linear-gradient(180deg, #092d30 40%, #0d4a4f 100%);
   --cartBack : rgba(255, 255, 255, 0.38);
 }
 
