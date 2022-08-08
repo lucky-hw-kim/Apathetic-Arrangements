@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import Layout from "../../components/Layout";
 import { client } from "../../lib/client";
 import css from '../../styles/OrderId.module.css'
-import { UilBill } from '@iconscout/react-unicons'
+import { UilBill, UilFlower, UilTruck, UilGift } from '@iconscout/react-unicons'
+import Spinner from "../../assets/Spinner.svg"
+import Image from "next/image";
 
 export const getServerSideProps = async ({ params }) => {
   const query = `*[_type == 'order' && _id == '${params.id}']`;
@@ -53,20 +55,20 @@ export default function Orders({ order }) {
             <span className={css.completed}>Completed</span> 
           }
           </div>
-          {/* <div className={css.status}>
-            <Image src={Cooking} alt="" width={50} height={50}/>
-            <span>Cooking</span>
+           <div className={css.status}>
+            <UilFlower width={50} height={50}/>
+            <span>Arranging</span>
             {order.status === 1 && (
               <div className={css.spinner}>
                 <Image src={Spinner} alt=""/>
               </div>
             )}
             {order.status > 1 && (
-              <span className={css.completed}>Completed</span>
+              <span className={css.completed}>Completed</span> 
             )}
           </div>
           <div className={css.status}>
-            <Image src={Onway} alt="" width={50} height={50}/>
+            <UilTruck width={50} height={50}/>
             <span>Enroute</span>
             {order.status === 2 && (
               <div className={css.spinner}>
@@ -78,7 +80,7 @@ export default function Orders({ order }) {
             )}
           </div>
           <div className={css.status}>
-            <UilBox width={50} height={50}/>
+            <UilGift width={50} height={50}/>
             <span>Delivered</span>
             {order.status === 3 && (
               <div className={css.spinner}>
@@ -88,7 +90,7 @@ export default function Orders({ order }) {
              {order.status > 3 && (
               <span className={css.completed}>Completed</span>
             )}
-          </div> */}
+          </div> 
         </div>
       </div>
     </Layout>
