@@ -16,14 +16,14 @@ const OrderModal = ({ opened, setOpened, paymentMethod}) => {
   const theme = useMantineTheme();
   const total = typeof window !== "undefined" && localStorage.getItem('total')
   const [formData, setFormData] = useState({})
-  const handleInput = (e: any) => {
+  const handleInput = (e) => {
     // Update the keyword of the input element
     setFormData({ ...formData, [e.target.name]: e.target.value, "address": value})
   };
 
   const resetCart = useStore(state => state.resetCart);
 
-  const handleSubmit = async(e: any) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     const id = await createOrder({ ...formData, total, paymentMethod })
     toast.success("Order Placed")
