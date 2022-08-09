@@ -18,8 +18,8 @@ function Header() {
       {/* LEFT SIDE */}
       <ul className={css.menu}>
         <li><Link href="/#about">ABOUT</Link> </li>
-        <li>SHOP</li>
-        <li>CONTACT</li>
+        <li><Link href="/#arrangements">SHOP</Link></li>
+        <li><Link href="/contact">CONTACT</Link></li>
       </ul>
       {/* CENTER LOGO */}
       <div className={css.logo}>
