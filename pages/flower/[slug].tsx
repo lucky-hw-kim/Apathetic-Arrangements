@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import Layout from "../../components/Layout";
 import { client, urlFor } from "../../lib/client";
 import { useStore } from "../../store/store";
@@ -27,6 +27,7 @@ export default function Flower({ flower }) {
 
   const addToCart = () => {
     addFlower({...flower, price: flower.price[size], quantity: quantity, size: size})
+    toast.success("Added to Cart")
   }
 
 

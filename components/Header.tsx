@@ -3,8 +3,13 @@ import css from "../styles/Header.module.css"
 import Logo from "../assets/Logo.png"
 import Link from "../node_modules/next/link"
 import { useStore } from "../store/store"
-
+import { useEffect, useState } from "react"
+import {UilReceipt} from "@iconscout/react-unicons"
 function Header() {
+  const [order, setOrder] = useState("")
+  useEffect(()=>{
+    setOrder(localStorage.getItem("order"))
+  })
   const state = useStore((state) => state);
   const items = useStore((state) => state.cart.flowers.length)
 
@@ -12,7 +17,7 @@ function Header() {
     <div className={css.header}>
       {/* LEFT SIDE */}
       <ul className={css.menu}>
-        <li><Link href="#about">ABOUT</Link> </li>
+        <li><Link href="/#about">ABOUT</Link> </li>
         <li>SHOP</li>
         <li>CONTACT</li>
       </ul>
@@ -26,9 +31,22 @@ function Header() {
       {/* RIGHT CART */}
       <ul className={css.menu}>
         <li>SEARCH</li>
-        <li> <Link href="/cart">CART</Link> </li>
-        <div className={css.badge}>{items}</div>
+        <div className={css.cart}></div>
+        <li> <Link href="/cart">CART</Link></li>
+        <div className={css.badge1}>{items}</div>
+        <li> {order && (
+       <Link href={`order/${order}`}>
+        <div className={css.cart}>
+          ORDER
+          {order != "" && <div className={css.badge2}>
+            1
+          </div>
+            }
+        </div>
+        </Link>
+      )}</li>
       </ul>
+     
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Modal, ThemeIcon, useMantineTheme } from "@mantine/core"
+import { Modal, useMantineTheme } from "@mantine/core"
 import css from "../styles/OrderModal.module.css"
 import usePlacesAutocomplete, {
   getGeocode,
@@ -15,9 +15,7 @@ const OrderModal = ({ opened, setOpened, paymentMethod}) => {
   const router = useRouter();
   const theme = useMantineTheme();
   const total = typeof window !== "undefined" && localStorage.getItem('total')
-
   const [formData, setFormData] = useState({})
-
   const handleInput = (e: any) => {
     // Update the keyword of the input element
     setFormData({ ...formData, [e.target.name]: e.target.value, "address": value})
@@ -28,11 +26,10 @@ const OrderModal = ({ opened, setOpened, paymentMethod}) => {
   const handleSubmit = async(e: any) => {
     e.preventDefault();
     const id = await createOrder({ ...formData, total, paymentMethod })
-    console.log(id);
     toast.success("Order Placed")
     resetCart();
-    {
-      typeof window !== 'undefined' && localStorage.setItem('order', id)
+    { 
+      typeof window !== 'undefined' &&  typeof window !== 'undefined'&& localStorage.setItem('order', id)
     }
     router.push(`order/${id}`)
     
