@@ -5,6 +5,8 @@ import Link from "../node_modules/next/link"
 import { useStore } from "../store/store"
 import { useEffect, useState } from "react"
 import {UilReceipt} from "@iconscout/react-unicons"
+import { useRouter } from "next/router"
+
 function Header() {
   const [order, setOrder] = useState("")
   useEffect(()=>{
@@ -12,7 +14,8 @@ function Header() {
   }, [])
   const state = useStore((state) => state);
   const items = useStore((state) => state.cart.flowers.length)
-
+  const router = useRouter()
+  
   return (
     <div className={css.header}>
       {/* LEFT SIDE */}
@@ -30,12 +33,11 @@ function Header() {
       </div>
       {/* RIGHT CART */}
       <ul className={css.menu}>
-        <li>SEARCH</li>
         <div className={css.cart}></div>
         <li> <Link href="/cart">CART</Link></li>
         <div className={css.badge1}>{items}</div>
         <li> {order && (
-       <Link href={`order/${order}`}>
+       <Link href={`/order/${order}`}>
         <div className={css.cart}>
           ORDER
           {order != "" && <div className={css.badge2}>
