@@ -9,7 +9,7 @@ const Hero = () => {
       <div className={css.container}>
         {/* Left Image */}
         <div className={css.heroImg}>
-          <Image src={heroImg} layout="responsive"/>
+          <Image src={heroImg} layout="responsive" alt=""/>
         </div>
         {/* Right slogan */}
         <div className={css.slogan}>

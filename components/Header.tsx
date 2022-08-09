@@ -9,7 +9,7 @@ function Header() {
   const [order, setOrder] = useState("")
   useEffect(()=>{
     setOrder(localStorage.getItem("order"))
-  })
+  }, [])
   const state = useStore((state) => state);
   const items = useStore((state) => state.cart.flowers.length)
 

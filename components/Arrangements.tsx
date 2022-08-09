@@ -11,7 +11,7 @@ const Arrangements = ({ flowers }) => {
       <div className={css.heading}>
         Arrangements
         <div className={css.tinyLogo}>
-          <Image src={tinyLogo} layout="responsive" />
+          <Image src={tinyLogo} layout="responsive" alt=""/>
         </div>
       </div>
       <div className={css.arrangements} id="arrangements">
