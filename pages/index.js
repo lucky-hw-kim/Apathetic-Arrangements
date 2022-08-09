@@ -7,7 +7,7 @@ import About from "../components/About"
 import Arrangements from "../components/Arrangements"
 import { client } from "../lib/client";
 import Script from "next/script";
-
+import ToTopBtn from "../components/ToTopBtn"
 
 export default function Home({flowers}) {
 
@@ -25,6 +25,7 @@ export default function Home({flowers}) {
           <Hero/>
           <About/>
           <Arrangements flowers = {flowers}/>
+          <ToTopBtn/>
         </main>
       </div>
     </Layout>

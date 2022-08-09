@@ -5,6 +5,7 @@
   padding: 1.5rem;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
+  z-index: 999;
 }
 
 .header>:nth-child(3) {
@@ -61,9 +62,11 @@
   font-size: 1rem;
 }
 
-.header>ul>li:hover{
+.menu>li:hover{
   color: var(--themeRed);
   cursor: pointer;
   transform: scale(1.1);
 }
+
+
 

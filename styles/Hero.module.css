@@ -1,6 +1,7 @@
 .container{
   display: flex;
   justify-content: space-around;
+  z-index: 10;
 }
 
 .heroImg{
@@ -39,9 +40,9 @@
   font-family: 'Bodoni 72 Oldstyle', bold;
 }
 
-.heroImg:hover{
+/* .heroImg:hover{
   transform: scale(1.05);
-}
+} */
 
 .detailSlogan {
   color: var(--light);

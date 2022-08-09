@@ -6,7 +6,7 @@ import Link from "next/link"
 const Hero = () => {
   return (
 
-      <div className={css.container}>
+      <div id="hero" className={css.container}>
         {/* Left Image */}
         <div className={css.heroImg}>
           <Image src={heroImg} layout="responsive" alt=""/>
