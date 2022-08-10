@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Apathetic Arrangements</h1>
+<h1 align="center" id="title">💐Apathetic Arrangements💐</h1>
 
 <p id="description">Apathetic Arrangements is the perfect flower delivery service for people who wish to send passive-aggressive gifts to people they hate.</p>
 
