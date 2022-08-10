@@ -21,7 +21,6 @@
     "react-hot-toast": "^2.3.0",
     "sanity": "^2.29.3",
     "stripe": "^10.0.0",
-    "use-places-autocomplete": "^4.0.0",
     "zustand": "https://pkg.csb.dev/pmndrs/zustand/commit/773e2e29/zustand"
   },
   "devDependencies": {
