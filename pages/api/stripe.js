@@ -18,7 +18,7 @@ export default async function handler (req, res) {
             "image-",
             "https://cdn.sanity.io/images/7p20qjpa/production/"
           )
-          .replace("-jpg", ".jpg");
+          .replace("-png", ".png");
 
           return {
             price_data: {

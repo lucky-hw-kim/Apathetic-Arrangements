@@ -5,7 +5,7 @@ import OrderModal from "../components/OrderModal"
 const success = () => {
   return (
     <Layout>
-      <OrderModal opened={true} paymentMethod={1} setOpened={""}/>
+      <OrderModal opened={true} paymentMethod={1}/>
     </Layout>
   )
 }
